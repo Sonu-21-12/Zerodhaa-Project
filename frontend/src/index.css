@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-item a{
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.footer-links p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.footer-links a {
+  display: block;
+  color: #424242;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 2px;
+}
+
+.footer-links a:hover {
+  color: #387ed1;
+  text-decoration: none;
+}
+
+.f-icons a{
+   color: #666;
+   padding-right: 20px;
+}
+
+nav > a {
+  text-decoration:none;
+  margin-right:55px;
+  color: #387ed1;
+}
+
+
+.tabs {
+  /* display: flex; */
+  gap: 80px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 45px;
+  padding-left: 0;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #387ed1;
+  font-size: 28px;
+  padding-bottom: 18px;
+}
+
+.tabs a:first-child {
+  color: #424242;
+  border-bottom: 3px solid #387ed1;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  color: #424242;
+}
+
+.pricing-table th {
+  padding: 22px 24px;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  font-size: 17;
+}
+
+.pricing-table td {
+  padding-bottom: 24px;
+  vertical-align: middle;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  line-height: 1.7;
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table td:first-child {
+  color: #666;
+  width: 13%;
+}
+
+.pricing-table ul {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.pricing-table li {
+  margin-bottom: 14px;
+}
+
+.pricing-table li:last-child {
+  margin-bottom: 0;
+}
+
+.charges-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.charges-section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 28px;
+  color: #424242;
+}
+
+.charges-table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 14px;
+  color: #424242;
+}
+
+.charges-table th {
+  text-align: left;
+  padding: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+}
+
+.charges-table td {
+  padding: 15px;
+ 
+}
+
+.charges-table tr:last-child td {
+  border-bottom: none;
+}
+
+.charges-table th:first-child,
+.charges-table td:first-child {
+  width: 65%;
+}
+
+.charges-table th:last-child,
+.charges-table td:last-child {
+  width: 35%;
+}
+
+.free-badge {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.charge-text {
+  margin-left: 5px;
+}
+
+
+label {
+  font-size: 1.2rem;
+  color: #656262;
+}
+
+
+ .form_container{
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 70px;
+  /* justify-content: center; */
+ }
+
+.form_container {
+  
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form_container > h2 {
+  margin-block: 1rem;
+  padding-block: 0.6rem;
+  color: rgba(0, 212, 255, 1);
+}
+
+.form_container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form_container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form_container input {
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid gray;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.form_container input::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.form_container button {
+  background-color: rgba(0, 212, 255, 1);
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+span a {
+  text-decoration: none;
+  color: rgba(0, 212, 255, 1);
+}
+
+.home_page button {
+  background-color: rgb(27, 73, 83);
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  transition: ease-in 0.3s;
+  border: none;
+}
+
+.home_page button:hover {
+  background-color: rgba(0, 212, 255, 1);
+}
+
