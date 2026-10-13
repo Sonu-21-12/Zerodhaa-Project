@@ -16,7 +16,7 @@ let active = true;
 const verifyCookie = async () => {
   try {
     const { data } = await axios.post(
-      "http://localhost:4001/",
+      "https://zerodhaa-project.onrender.com/",
       {},
       { withCredentials: true }
     );

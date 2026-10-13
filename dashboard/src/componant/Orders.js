@@ -12,7 +12,7 @@ const Orders = () => {
 
     const fetchOrders = async () => {
       try {
-        const { data } = await axios.get("http://localhost:4001/order");
+        const { data } = await axios.get("https://zerodhaa-project.onrender.com/order");
         if (active) setOrders(Array.isArray(data) ? data : []);
       } catch (err) {
         if (active) setError("Orders load nahi ho sake. Backend connection check karein.");

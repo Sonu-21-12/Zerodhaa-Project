@@ -8,7 +8,7 @@ const Positions = () => {
   let [positionData, setPositionData] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:4001/position")
+    axios.get("https://zerodhaa-project.onrender.com/position")
     .then((res) => {
        setPositionData(res.data)
        console.log(res.data)

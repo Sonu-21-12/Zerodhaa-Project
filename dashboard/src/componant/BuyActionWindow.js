@@ -16,7 +16,7 @@ const BuyActionWindow = ({ uid }) => {
 
   const handleBuyClick = async () => {
     try {
-      await axios.post("http://localhost:4001/newOrder", {
+      await axios.post("https://zerodhaa-project.onrender.com/newOrder", {
         name:uid,
         qty:stockQuantity,
         price:stockPrice,
@@ -30,7 +30,7 @@ const BuyActionWindow = ({ uid }) => {
   };
   const handleSellClick = async () => {
     try {
-      await axios.post("http://localhost:4001/newOrder", {
+      await axios.post("https://zerodhaa-project.onrender.com/newOrder", {
         name:uid,
         qty:stockQuantity,
         price:stockPrice,

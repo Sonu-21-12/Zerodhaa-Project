@@ -19,7 +19,7 @@ useEffect(() => {
 const verifyUser = async () => {
 try {
 const { data } = await axios.post(
-"http://localhost:4001/",
+"https://zerodhaa-project.onrender.com",
 {},
 { withCredentials: true }
 );
@@ -47,7 +47,7 @@ verifyUser();
 const handleLogout = async () => {
 try {
   await axios.post(
-    "http://localhost:4001/logout",
+    "https://zerodhaa-project.onrender.com/logout",
     {},
     { withCredentials: true }
   );
