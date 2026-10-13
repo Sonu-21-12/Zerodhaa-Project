@@ -1,5 +1,5 @@
 
-const { status } = require('init');
+
 const User = require('../model/userModel')
 require("dotenv").config()
 const jwt = require("jsonwebtoken")
