@@ -17,14 +17,17 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 
+const allowedOrigins = [
+  "https://zerodhaa-project-1.onrender.com",
+  "https://zerodhaa-project-dashboard.onrender.com",
+  "http://localhost:3000",
+"http://localhost:3001",
+"http://localhost:3003",
+];
+
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests from local development and deployed frontend
-    if (
-      !origin ||
-      /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
-      origin === "https://zerodhaa-project-1.onrender.com"
-    ) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Origin not allowed by CORS"));
