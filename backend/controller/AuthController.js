@@ -12,10 +12,11 @@ const {createSecretToken} = require('../utils/SecretToken')
     }
     const user =    await User.create({email, password, username, createdAt });
     const token = createSecretToken(user._id);
-    res.cookie("token" , token, {
-        withCredentials: true,
-      httpOnly: false
-     
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      path: "/",
     });
     res.status(201)
     .json({message : "User registresd successfully" , success : true,token :token,  user} );
@@ -54,8 +55,10 @@ module.exports.Login = async (req,res,next) => {
    
        const token = createSecretToken(user._id);
      res.cookie("token", token, {
-       withCredentials: true,
-       httpOnly: false,
+       httpOnly: true,
+       secure: true,
+       sameSite: "none",
+       path: "/",
      });
      res.status(201).json({ message: "User logged in successfully", success: true });
      next()
@@ -65,6 +68,11 @@ module.exports.Login = async (req,res,next) => {
 }
 
 module.exports.Logout = (req, res) => {
-  res.clearCookie("token", { path: "/" });
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+    path: "/",
+  });
   return res.json({ success: true, message: "Logged out successfully" });
 };

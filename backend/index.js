@@ -20,9 +20,7 @@ const app = express();
 const allowedOrigins = [
   "https://zerodhaa-project-1.onrender.com",
   "https://zerodhaa-project-dashboard.onrender.com",
-  "http://localhost:3000",
-"http://localhost:3001",
-"http://localhost:3003",
+  
 ];
 
 app.use(cors({
