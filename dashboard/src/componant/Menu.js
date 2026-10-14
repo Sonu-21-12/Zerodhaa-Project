@@ -28,14 +28,14 @@ const { data } = await axios.post(
     if (data.status) {
       setUsername(data.user);
     } else {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "https://zerodhaa-project-1.onrender.com/login";
     }
   } catch (error) {
     console.error(
       "User verification failed:",
       error.response?.data || error.message
     );
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://zerodhaa-project-1.onrender.com//login";
   }
 };
 
@@ -57,7 +57,7 @@ try {
     error.response?.data || error.message
   );
 } finally {
-  window.location.href = "http://localhost:3000";
+  window.location.href = "https://zerodhaa-project-1.onrender.com/";
 }
 };
 

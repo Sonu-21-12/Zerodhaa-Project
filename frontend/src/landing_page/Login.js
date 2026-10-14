@@ -40,7 +40,7 @@ const Login = () => {
       console.log(data);
       const { success, message } = data;
       if (success) {
-        window.location.assign("http://localhost:3001/");
+        window.location.assign("https://zerodhaa-project-dashboard.onrender.com");
         return;
       } else {
         handleError(message);

@@ -42,7 +42,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:3003";
+          window.location.href = "https://zerodhaa-project-dashboard.onrender.com";
         }, 1000);
       } else {
         handleError(message);

@@ -16,13 +16,14 @@ const cookieParser = require("cookie-parser");
 
 
 const app = express();
+
 app.use(cors({
   origin: function (origin, callback) {
-    // CRA may start the frontend/dashboard on another port if the default is busy.
-    // In local development, accept localhost origins on any port.
+    // Allow requests from local development and deployed frontend
     if (
       !origin ||
-      /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)
+      /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
+      origin === "https://zerodhaa-project-1.onrender.com"
     ) {
       callback(null, true);
     } else {
@@ -36,6 +37,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/", AuthRoutes);
+
 
 
 const mongoUrl = process.env.MONGOURL;
