@@ -218,4 +218,65 @@
     background: #9b9b9b;
     color: #fff;
   }
+
+@media (max-width: 760px) {
+  #buy-window.container {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: min(94vw, 460px);
+    height: auto;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+    transform: translateX(-50%);
+    cursor: default;
+  }
+
+  #buy-window .regular-order {
+    padding: 16px;
+  }
+
+  #buy-window .inputs {
+    gap: 10px;
+  }
+
+  #buy-window .inputs fieldset {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  #buy-window .inputs fieldset input {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  #buy-window .order-validity {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #buy-window .buttons {
+    position: static;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px 16px;
+  }
+
+  #buy-window .buttons > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #buy-window .buttons .btn {
+    margin: 0;
+    padding: 9px 14px;
+  }
+}
   

@@ -1213,3 +1213,425 @@ hr {
 .action:hover {
   background-color: rgb(212, 212, 212);
 }
+
+/* Responsive dashboard layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.topbar-container,
+.dashboard-container {
+  min-width: 0;
+}
+
+.content {
+  min-width: 0;
+}
+
+.order-table,
+.orders-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.order-table table {
+  min-width: 560px;
+}
+
+.orders-table {
+  min-width: 560px;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+@media (min-width: 761px) and (max-width: 1024px) {
+  .indices-container {
+    flex-basis: 30%;
+    padding-inline: 10px;
+  }
+
+  .menu-container {
+    flex-basis: 70%;
+    padding-inline: 10px;
+  }
+
+  .menus li {
+    margin-right: 14px;
+  }
+
+  .profile {
+    margin-left: 8px;
+  }
+
+  .dashboard-container > .watchlist-container {
+    flex-basis: 35%;
+  }
+
+  .dashboard-container > .content {
+    flex-basis: 65%;
+    padding: 24px 18px;
+  }
+
+  .data {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar-container {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .indices-container {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 52px;
+    padding: 8px 12px;
+    border-right: 0;
+    border-bottom: 1px solid rgb(224, 224, 224);
+  }
+
+  .nifty,
+  .sensex {
+    flex: 1 1 50%;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  .menu-container {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    min-height: 72px;
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menus {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menus ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menus li {
+    margin: 0;
+  }
+
+  .menu {
+    margin: 8px 0;
+    font-size: 0.82rem;
+  }
+
+  .menus hr {
+    display: none;
+  }
+
+  .profile {
+    margin: 4px 0 0;
+    gap: 6px;
+  }
+
+  .profile .username {
+    margin: 0;
+  }
+
+  .profile button {
+    min-height: 36px;
+    padding: 6px 10px;
+  }
+
+  .dashboard-container {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .watchlist-container {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 300px;
+    max-height: 42vh;
+    min-height: 240px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+  }
+
+  .search {
+    height: auto;
+    min-height: 48px;
+    padding: 12px 78px 12px 14px;
+  }
+
+  .counts {
+    right: 12px;
+  }
+
+  .list {
+    padding: 0 0 18px;
+  }
+
+  .list li {
+    padding: 12px 14px;
+  }
+
+  .watchlist-number {
+    position: sticky;
+    width: 100%;
+    height: auto;
+    min-height: 52px;
+    bottom: 0;
+    padding: 4px 8px;
+    justify-content: center;
+  }
+
+  .watchlist-number ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .watchlist-number ul li {
+    padding: 8px 12px;
+  }
+
+  .content {
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    padding: 24px 16px;
+    overflow: visible;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .row .col {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .funds {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .funds p {
+    flex: 1 1 100%;
+    margin: 0 0 4px;
+  }
+
+  .data {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .data .first h3 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .data .second p {
+    white-space: normal;
+  }
+
+  .section span p {
+    font-size: 1rem;
+  }
+
+  .commodity {
+    padding: 12px 0;
+  }
+
+  .orders {
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .orders-heading {
+    flex-wrap: wrap;
+  }
+
+  .orders-heading .title {
+    font-size: 1.3rem;
+  }
+
+  .orders-heading .orders-action {
+    align-self: flex-start;
+  }
+
+  .orders-table-heading {
+    padding: 14px;
+  }
+
+  .holdings-chart-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .holdings-chart {
+    height: 230px;
+  }
+}
+
+@media (max-width: 420px) {
+  .indices-container {
+    padding-inline: 4px;
+  }
+
+  .index,
+  .index-points,
+  .percent {
+    font-size: 0.7rem;
+  }
+
+  .menus ul {
+    gap: 0 9px;
+  }
+
+  .menu {
+    font-size: 0.76rem;
+  }
+
+  .content {
+    padding: 20px 12px;
+  }
+
+  .table {
+    padding: 16px;
+  }
+
+  .data {
+    gap: 8px;
+  }
+
+  .data .second p span {
+    margin-left: 2%;
+  }
+
+  .watchlist-number ul li {
+    padding: 7px 9px;
+  }
+}
+
+/* Collapsible dashboard navigation on small screens */
+.dashboard-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .menu-container {
+    justify-content: stretch;
+  }
+
+  .menus {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .dashboard-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 88px;
+    min-height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #d8dee8;
+    border-radius: 8px;
+    background: #fff;
+    color: #334155;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .dashboard-menu-toggle span:first-child {
+    color: #387ed1;
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  .menus:not(.menu-open) ul {
+    display: none;
+  }
+
+  .menus.menu-open ul {
+    display: flex;
+    order: 3;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 4px 0 0;
+    padding: 6px 0;
+    border: 1px solid #e8edf4;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .menus.menu-open li {
+    width: 100%;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .menus.menu-open li:last-child {
+    border-bottom: 0;
+  }
+
+  .menus.menu-open li a {
+    display: block;
+    padding: 2px 14px;
+  }
+
+  .menus.menu-open li .menu {
+    margin: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .menus > hr {
+    display: none;
+  }
+
+  .menus .profile {
+    order: 2;
+    margin: 0;
+  }
+}

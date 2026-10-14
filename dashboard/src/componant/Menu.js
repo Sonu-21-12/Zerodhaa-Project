@@ -14,6 +14,7 @@ const Menu = () => {
 const { pathname } = useLocation();
 const navigate = useNavigate();
 const [username, setUsername] = useState("");
+const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 useEffect(() => {
 const verifyUser = async () => {
@@ -61,7 +62,18 @@ try {
 }
 };
 
-return ( <div className="menu-container"> <div className="menus"> <ul>
+return ( <div className="menu-container"> <div className={`menus${isMenuOpen ? " menu-open" : ""}`}>
+<button
+  className="dashboard-menu-toggle"
+  type="button"
+  aria-label={isMenuOpen ? "Close dashboard navigation" : "Open dashboard navigation"}
+  aria-expanded={isMenuOpen}
+  onClick={() => setIsMenuOpen((open) => !open)}
+>
+  <span aria-hidden="true">☰</span>
+  <span>Menu</span>
+</button>
+<ul>
 {menuItems.map(({ label, path }) => {
 const isActive = pathname === path;
 
@@ -70,6 +82,7 @@ const isActive = pathname === path;
           <li key={path}>
             <Link
               to={path}
+              onClick={() => setIsMenuOpen(false)}
               style={{ textDecoration: "none" }}
               aria-current={isActive ? "page" : undefined}
             >
